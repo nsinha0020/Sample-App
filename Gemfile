@@ -24,6 +24,16 @@ gem 'jbuilder', '~> 2.0'
 #bootstrap sass gem
 gem 'bootstrap-sass'
 
+# for Heroku
+group :development, :test do
+     gem 'sqlite3'
+end
+
+group :production do
+     gem 'pg'
+     gem 'rails_12factor'
+end
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
